@@ -1,6 +1,14 @@
 #include <iostream>
+using namespace std;
 
+int gcd(const int a, const int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
 int main() {
-    std::cout << "My name is Jason Kim" << std::endl;
+    int a, b;
+
+    cout << "Enter two numbers: " << endl;
+    cin >> a >> b;
+    cout << "Greatest Common Denoinator is : " << gcd(a, b) << endl;
     return 0;
 }
